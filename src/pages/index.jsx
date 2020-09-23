@@ -46,22 +46,22 @@ const Home = () => {
 
 		// Data
 		const data = {
-			options_trip: e.target.option_trip.value,
+			optionsTrip: e.target.option_trip.value,
 			city: e.target.origin.value,
 			destiny: e.target.destiny.value,
 			date: e.target.date.value,
-			amount_people: e.target.amount.value
-		}
+			amountPeople: e.target.amount.value
+		};
 
 		// Create function to get data
 
 		// console.log(data);
 		// Form reset
-		setIsChecked('');
-		setOrigin('');
-		setDestiny('');
-		setDate('');
-		setAmountPeople('');
+		setIsChecked("");
+		setOrigin("");
+		setDestiny("");
+		setDate("");
+		setAmountPeople("");
 	}
 
 	return (
