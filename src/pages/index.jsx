@@ -62,7 +62,7 @@ const Home = () => {
 		setDestiny("");
 		setDate("");
 		setAmountPeople("");
-	}
+	};
 
 	return (
 		<Page>
@@ -73,7 +73,7 @@ const Home = () => {
 
 				<TravelsForm onSubmit={handleSearchTravel}>
 					<FieldGroup>
-						{trip.map(option => (
+						{trip.map((option) => (
 							<Label key={option}>
 								{option}
 								<Checkbox
@@ -81,7 +81,7 @@ const Home = () => {
 									name="option_trip"
 									value={option}
 									checked={isChecked === option}
-									onChange={e => setIsChecked(e.target.value)}
+									onChange={(e) => setIsChecked(e.target.value)}
 								/>
 								<Checked></Checked>
 							</Label>
@@ -98,7 +98,7 @@ const Home = () => {
 									type="text"
 									name="origin"
 									value={origin}
-									onChange={e => setOrigin(e.target.value)}
+									onChange={(e) => setOrigin(e.target.value)}
 									placeholder="Insira a cidade ou destino"
 									required
 								/>
@@ -114,7 +114,7 @@ const Home = () => {
 									type="text"
 									name="destiny"
 									value={destiny}
-									onChange={e => setDestiny(e.target.value)}
+									onChange={(e) => setDestiny(e.target.value)}
 									placeholder="Insira a cidade ou destino"
 									required
 								/>
@@ -130,7 +130,7 @@ const Home = () => {
 									type="text"
 									name="date"
 									value={date}
-									onChange={e => setDate(e.target.value)}
+									onChange={(e) => setDate(e.target.value)}
 									placeholder="Ex Segunda 20/11 - Domingo 25/11"
 									required
 								/>
@@ -146,7 +146,7 @@ const Home = () => {
 									type="text"
 									name="amount"
 									value={amountPeople}
-									onChange={e => setAmountPeople(e.target.value)}
+									onChange={(e) => setAmountPeople(e.target.value)}
 									placeholder="Insira o número de pessoas"
 									required
 								/>
