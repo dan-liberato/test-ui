@@ -23,16 +23,16 @@ import {
 	Checked,
 	Footer,
 	SearchTravel,
-} from '../styles/styles';
+} from "../styles/styles";
 
-const trip = ["Ida e volta", "Só ida", "Só volta"]
+const trip = ["Ida e volta", "Só ida", "Só volta"];
 
 const data = {
 	"origem": "São Paulo, Brazil",
 	"destino": "São Paulo, Brazil",
 	"data": "Sábado 14/4 - Quinta 18/4",
 	"pessoas": 1
-}
+};
 
 const Home = () => {
 	const [isChecked, setIsChecked] = useState(trip[0]);
