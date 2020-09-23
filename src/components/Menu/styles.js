@@ -126,12 +126,12 @@ export const SignIn = styled.div`
 `;
 
 export const OpenToolbar = styled.div`
-	cursor: pointer;
-
-	a {
+	button {
 		color: #FFFFFF;
 		float: right;
 		margin-top: 17px;
+		background: transparent;
+		outline: none;
 		margin-right: 1px;
 	}
 

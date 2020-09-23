@@ -46,8 +46,10 @@ const Menu = () => {
 				<Link href="#"><a>Login</a></Link>
 			</SignIn>
 
-			<OpenToolbar onClick={handleOpenToolbar}>
-				<a><MenuIcon width={40} /></a>
+			<OpenToolbar>
+				<button onClick={handleOpenToolbar}>
+					<MenuIcon width={40} />
+				</button>
 			</OpenToolbar>
 		</Toolbar>
 	)
