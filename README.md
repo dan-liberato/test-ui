@@ -11,7 +11,7 @@
 ![Screenshot](screenshot.png)
 
 ## :computer: &middot; Projeto
-<p>Projeto desenvolvido baseado no desafio Front-end no Atados.</p>
+<p>Projeto desenvolvido baseado no desafio Front-end do Atados.</p>
 
 ## :rocket: &middot; Tecnologias
 Desenvolvido com:
