@@ -1,7 +1,7 @@
 import React from "react";
 import {
 	InputField
-} from "./styles"
+} from "./styles";
 
 const Input = ({ type, name, value, placeholder, onChange }) => {
 	return (
@@ -13,6 +13,6 @@ const Input = ({ type, name, value, placeholder, onChange }) => {
 			onChange={onChange}
 			required
 		/>
-	)
-}
+	);
+};
 export default Input;
