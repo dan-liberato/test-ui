@@ -41,6 +41,29 @@ const Home = () => {
 	const [date, setDate] = useState(data.data);
 	const [amountPeople, setAmountPeople] = useState(data.pessoas);
 
+	const handleSearchTravel = async (e) => {
+		e.preventDefault();
+
+		// Data
+		const data = {
+			options_trip: e.target.option_trip.value,
+			city: e.target.origin.value,
+			destiny: e.target.destiny.value,
+			date: e.target.date.value,
+			amount_people: e.target.amount.value
+		}
+
+		// Create function to get data
+
+		// console.log(data);
+		// Form reset
+		setIsChecked('');
+		setOrigin('');
+		setDestiny('');
+		setDate('');
+		setAmountPeople('');
+	}
+
 	return (
 		<Page>
 			<Container>
@@ -48,17 +71,17 @@ const Home = () => {
 				<Title>Viaje pelo mundo inteiro</Title>
 				<Description>Aqui você encontra os melhores voos do mundo</Description>
 
-				<TravelsForm>
+				<TravelsForm onSubmit={handleSearchTravel}>
 					<FieldGroup>
 						{trip.map(option => (
 							<Label key={option}>
 								{option}
 								<Checkbox
 									type="radio"
-									name="trip"
+									name="option_trip"
 									value={option}
 									checked={isChecked === option}
-									onChange={e => setIsChecked(e.currentTarget.value)}
+									onChange={e => setIsChecked(e.target.value)}
 								/>
 								<Checked></Checked>
 							</Label>
@@ -67,15 +90,15 @@ const Home = () => {
 
 					<FieldGroup className="no-padding-top grid">
 						<Field>
-							<Label htmlFor="origin">	Origem </Label>
+							<Label htmlFor="origin">Origem</Label>
 
 							<FieldContent>
 								<Image size={34} />
 								<Input
 									type="text"
-									name="city"
+									name="origin"
 									value={origin}
-									onChange={e => setOrigin(e.currentTarget.value)}
+									onChange={e => setOrigin(e.target.value)}
 									placeholder="Insira a cidade ou destino"
 									required
 								/>
@@ -91,7 +114,7 @@ const Home = () => {
 									type="text"
 									name="destiny"
 									value={destiny}
-									onChange={e => setDestiny(e.currentTarget.value)}
+									onChange={e => setDestiny(e.target.value)}
 									placeholder="Insira a cidade ou destino"
 									required
 								/>
@@ -107,7 +130,7 @@ const Home = () => {
 									type="text"
 									name="date"
 									value={date}
-									onChange={e => setDate(e.currentTarget.value)}
+									onChange={e => setDate(e.target.value)}
 									placeholder="Ex Segunda 20/11 - Domingo 25/11"
 									required
 								/>
@@ -123,7 +146,7 @@ const Home = () => {
 									type="text"
 									name="amount"
 									value={amountPeople}
-									onChange={e => setAmountPeople(e.currentTarget.value)}
+									onChange={e => setAmountPeople(e.target.value)}
 									placeholder="Insira o número de pessoas"
 									required
 								/>
