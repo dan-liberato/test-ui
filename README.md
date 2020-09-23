@@ -11,7 +11,7 @@
 ![Screenshot](screenshot.png)
 
 ## :computer: &middot; Projeto
-<p>Projeto desenvolvido baseado no desafio Front-end do Atados.</p>
+<p>Projeto desenvolvido baseado no desafio Front-end do Atados. Para ver o desafio, [clique aqui](https://test-ui-ivory.vercel.app/)</p>
 
 ## :rocket: &middot; Tecnologias
 Desenvolvido com:
