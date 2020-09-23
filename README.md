@@ -11,7 +11,7 @@
 ![Screenshot](screenshot.png)
 
 ## :computer: &middot; Projeto
-<p>Projeto desenvolvido baseado no desafio Front-end do Atados. Para ver o desafio acesse:</p>
+<p>Projeto desenvolvido baseado no desafio Front-end do Atados. Para ver a interface acesse:</p>
 
 - [https://test-ui-ivory.vercel.app/](https://test-ui-ivory.vercel.app/)
 
