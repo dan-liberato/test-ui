@@ -32,7 +32,7 @@ export const Heading = styled.ul`
 	width: 165px;
 	padding-left: 10px;
 	transition: all 0.3s linear;
-	visibility: ${props => props.openToolbar ? 'visible' : 'hidden'};
+	visibility: ${props => props.openToolbar ? "visible" : "hidden"};
 
 	@media (min-width: 768px) {
 		flex-direction: row;
@@ -64,7 +64,7 @@ export const HeadingItem = styled.li`
 			color: #FFFFFF;
 		}
 	}
-`
+`;
 
 export const SignIn = styled.div`
 	display: flex;
@@ -85,7 +85,7 @@ export const SignIn = styled.div`
 	box-shadow: 0 10px 10px rgba(0, 0, 0, .10);
 
 	transition: all 0.3s linear;
-	visibility: ${props => props.openToolbar ? 'visible' : 'hidden'};
+	visibility: ${props => props.openToolbar ? "visible" : "hidden"};
 
 	a {
 		font-weight: 400;

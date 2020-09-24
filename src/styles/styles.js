@@ -232,8 +232,7 @@ export const Footer = styled.div`
 	@media (min-width: 768px) {
 		padding: 24px;
 	}
-
-`
+`;
 
 export const SearchTravel = styled.button`
 	outline: none;

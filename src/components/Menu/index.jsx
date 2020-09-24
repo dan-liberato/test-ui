@@ -52,6 +52,6 @@ const Menu = () => {
 				</button>
 			</OpenToolbar>
 		</Toolbar>
-	)
-}
+	);
+};
 export default Menu;
