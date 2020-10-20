@@ -39,29 +39,28 @@ const Home = () => {
 	const [origin, setOrigin] = useState(data.origem);
 	const [destiny, setDestiny] = useState(data.destino);
 	const [date, setDate] = useState(data.data);
-	const [amountPeople, setAmountPeople] = useState(data.pessoas);
+	const [qty, setQty] = useState(data.pessoas);
 
 	const handleSearchTravel = async (e) => {
 		e.preventDefault();
 
 		// Data
 		const data = {
-			optionsTrip: e.target.option_trip.value,
-			city: e.target.origin.value,
-			destiny: e.target.destiny.value,
-			date: e.target.date.value,
-			amountPeople: e.target.amount.value
+			isChecked,
+			origin,
+			destiny,
+			date,
+			qty
 		};
 
-		// Create function to get data
-
 		// console.log(data);
-		// Form reset
+
+		// Reset Form
 		setIsChecked("");
 		setOrigin("");
 		setDestiny("");
 		setDate("");
-		setAmountPeople("");
+		setQty("");
 	};
 
 	return (
@@ -138,15 +137,15 @@ const Home = () => {
 						</Field>
 
 						<Field className="mg-left">
-							<Label htmlFor="amount">Número de pessoas</Label>
+							<Label htmlFor="qty">Número de pessoas</Label>
 
 							<FieldContent>
 								<Person size={34} />
 								<Input
 									type="text"
-									name="amount"
-									value={amountPeople}
-									onChange={(e) => setAmountPeople(e.target.value)}
+									name="qty"
+									value={qty}
+									onChange={(e) => setQty(e.target.value)}
 									placeholder="Insira o número de pessoas"
 									required
 								/>

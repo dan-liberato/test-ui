@@ -3,55 +3,56 @@ import Link from "next/link";
 import Logo from "../../assets/svg/Icon/Logo.svg";
 import MenuIcon from "../../assets/svg/Icon/Menu.svg";
 import {
-	Toolbar,
-	Heading,
-	HeadingItem,
+	Container,
+	ListMenu,
+	ListMenuItem,
 	SignIn,
-	OpenToolbar,
+	OpenMenu,
 } from "./styles";
 
 const Menu = () => {
-	const [openToolbar, setOpenToolbar] = useState(false);
+	const [openMenu, setOpenMenu] = useState(false);
 
-	const handleOpenToolbar = () => {
-		setOpenToolbar(!openToolbar);
-	}
+	const handleOpenMenu = () => {
+		setOpenMenu(!openMenu);
+	};
 
 	return (
-		<Toolbar>
+		<Container>
 			<Link href="/">
 				<a><Logo width={60} height={60} /></a>
 			</Link>
 
-			<Heading openToolbar={openToolbar}>
-				<HeadingItem>
+			<ListMenu openMenu={openMenu}>
+				<ListMenuItem>
 					<Link href="#"><a>Explore</a></Link>
-				</HeadingItem>
+				</ListMenuItem>
 
-				<HeadingItem>
+				<ListMenuItem>
 					<Link href="#"><a>Sobre Nós</a></Link>
-				</HeadingItem>
+				</ListMenuItem>
 
-				<HeadingItem>
+				<ListMenuItem>
 					<Link href="#"><a>Seguros</a></Link>
-				</HeadingItem>
+				</ListMenuItem>
 
-				<HeadingItem>
+				<ListMenuItem>
 					<Link href="#"><a>Hotéis</a></Link>
-				</HeadingItem>
-			</Heading>
+				</ListMenuItem>
+			</ListMenu>
 
-			<SignIn openToolbar={openToolbar}>
+			<SignIn openMenu={openMenu}>
 				<Link href="#"><a>Viagens</a></Link>
 				<Link href="#"><a>Login</a></Link>
 			</SignIn>
 
-			<OpenToolbar>
-				<button onClick={handleOpenToolbar}>
+			<OpenMenu>
+				<button onClick={handleOpenMenu}>
 					<MenuIcon width={40} />
 				</button>
-			</OpenToolbar>
-		</Toolbar>
+			</OpenMenu>
+		</Container>
 	);
 };
+
 export default Menu;

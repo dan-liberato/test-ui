@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const Toolbar = styled.nav`
+export const Container = styled.nav`
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 15px 0px;
 	border-bottom: 1px solid #CBD5E0;
 	color: #FFFFFF;
+	position: relative;
 
 	::first-child {
 		width: 60px;
@@ -17,7 +18,7 @@ export const Toolbar = styled.nav`
 	}
 `;
 
-export const Heading = styled.ul`
+export const ListMenu = styled.ul`
 	list-style: none;
 	display: flex;
 	flex-flow: column wrap;
@@ -32,7 +33,7 @@ export const Heading = styled.ul`
 	width: 165px;
 	padding-left: 10px;
 	transition: all 0.3s linear;
-	visibility: ${props => props.openToolbar ? "visible" : "hidden"};
+	visibility: ${props => props.openMenu ? "visible" : "hidden"};
 
 	@media (min-width: 768px) {
 		flex-direction: row;
@@ -46,7 +47,7 @@ export const Heading = styled.ul`
 
 `;
 
-export const HeadingItem = styled.li`
+export const ListMenuItem = styled.li`
 	padding: 8px 0;
 	font-weight: 400;
 
@@ -85,7 +86,7 @@ export const SignIn = styled.div`
 	box-shadow: 0 10px 10px rgba(0, 0, 0, .10);
 
 	transition: all 0.3s linear;
-	visibility: ${props => props.openToolbar ? "visible" : "hidden"};
+	visibility: ${props => props.openMenu ? "visible" : "hidden"};
 
 	a {
 		font-weight: 400;
@@ -125,7 +126,7 @@ export const SignIn = styled.div`
 	}
 `;
 
-export const OpenToolbar = styled.div`
+export const OpenMenu = styled.div`
 	button {
 		color: #FFFFFF;
 		float: right;
